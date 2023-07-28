@@ -161,3 +161,14 @@ body {
     transition: opacity 0.3s;
     cursor: pointer;
 }
+
+#event-title {
+    background-color: white;
+    height: calc(10vw + 50px);
+    text-align: center;
+    color:#E1CCBE;
+    font-size: 36px;
+}
+
+#masonry-gallery {
+}
