@@ -2,7 +2,7 @@ const Handlebars = require("handlebars");
 const fs = require("fs");
 const path = require('path');
 
-// helper print
+// log wrapper
 var print = console.log
 
 let data = []
