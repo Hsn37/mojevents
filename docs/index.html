@@ -19,11 +19,11 @@
         
         <!-- landing image -->
         <div id="landingdiv">
-            <img id="landingimg" src="/assets/images/landing.jpg">
+            <img id="landingimg" src="/assets/images/landing.jpeg">
             <div id="tagline-content">
                 <div id="tagline">Unique Created Weddings & Events</div>
                 <br>
-                <div class="button1">View Portfolio</div>
+                <div class="button1" id="viewPortfolio">View Portfolio</div>
             </div>
         </div>
     </div>
@@ -31,14 +31,14 @@
     <!-- secondpanel -->
     <div class="container-fluid" id="panel2">
         <div class="row mx-4">
-            <div class="col-lg order-lg-2 my-4 d-flex justify-content-lg-end justify-content-center">
-                <img class="img-fluid" src="assets/images/person.jpg" style="height: 600px">
+            <div class="col-lg order-lg-2 my-4 d-flex justify-content-center">
+                <img class="img-fluid" src="assets/images/intro.jpeg" style="height: 600px">
             </div>
             <div class="col-lg order-lg-1 my-4 ">
                 <div class="title">Luxury Event Planning</div>
                 <br>
                 <div class="info">
-                    Event Du Jour is a luxury event planning + design company. We execute stunning events that allow individuals to celebrate life’s most important milestones in style. Founded in 2016 by Lusine Vartanian, Event Du Jour has planned many luxury weddings and events and we look forward to chatting with you about your celebration!
+                    Moj events & designs is an experienced and luxury event and designing company that has been offering its service since 2017. We are there to make people’s event memorable for them by executing their celebrations for milestones in life with class. Moj events and designs has planned and executed a lot of events in style. Looking forward to have a little chat with you to plan and design your next event!
                 </div>
                 <br>
                 <div class="button2">Contact Us</div>
@@ -55,4 +55,8 @@
 <script>
     $('#navbar').load('/components/navbar')
     $('#footer').load('/components/footer')
+
+    $('#viewPortfolio').on('click', () => {
+        window.location.href = '/gallery'
+    })
 </script>

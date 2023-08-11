@@ -19,17 +19,7 @@
     </div>
 
     <!-- gallery -->
-    <div id="page-title">Portfolio</div>
-    <div class="d-flex justify-content-evenly flex-row align-items-center flex-wrap p-0 mb-5" id="gallery">
-        <div class="col-4 m-4 gallery-tile">
-            <div class="tile-title" id=event0>Event 1</div>
-            <img src="/assets/images/events/Event 1/thumbnail.jpeg">
-        </div>
-        <div class="col-4 m-4 gallery-tile">
-            <div class="tile-title" id=event1>Event 2</div>
-            <img src="/assets/images/events/Event 2/thumbnail.jpeg">
-        </div>
-    </div>
+    <div id="page-title">About Us</div>
 
     <!-- footer -->
     <div class="container-fluid" id="panel3">
@@ -40,26 +30,4 @@
 <script>
     $('#navbar').load('/components/navbar')
     $('#footer').load('/components/footer')
-</script>
-<script>
-    $('.tile-title').hover(
-        // on hover
-        (e) => {
-            // console.log($(this).find('tile-title'))
-            $(e.target).css('opacity', 0.7)
-        },
-        // exit hover
-        (e) => {
-            $(e.target).css('opacity', 0)
-        }
-    )
-
-    $('.tile-title').click(
-        // on click
-        (e) => {
-            // console.log($(this).find('tile-title'))
-            let id = e.target.id
-            window.location.href = `/events/${id}`
-        }
-    )
 </script>

@@ -10,7 +10,7 @@
 
 body {
     font-family: cormorantgaramond;
-    background-color: #EEEDEB;
+    /* background-color: #EEEDEB; */
     padding: 0;
 }
 
@@ -111,19 +111,17 @@ body {
 
 /* Gallery */
 
-#gallery {
-    
-}
-
-#gallery-title {
+#page-title {
     font-family: lapaloma;
     font-size: xxx-large;
     text-align: center;
-    color: #E1CCBE;
+    color: black;
+    background-color: #E1CCBE;
     height: 200px;
-    justify-content: center;
     display: flex;
+    justify-content: center;
     align-items: center;
+    padding-top: 40px;
 }
 
 .gallery-tile {
