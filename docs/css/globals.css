@@ -14,6 +14,10 @@ body {
     padding: 0;
 }
 
+img {
+    object-fit: cover;
+}
+
 #panel1 {
     background-color: #EEEDEB;
     padding: 2%;
@@ -168,5 +172,5 @@ body {
     font-size: 36px;
 }
 
-#masonry-gallery {
-}
+/* #masonry-gallery {
+} */
