@@ -19,7 +19,7 @@ img {
 }
 
 #panel1 {
-    background-color: #EEEDEB;
+    background-color: white;
     padding: 2%;
 }
 
@@ -120,7 +120,7 @@ img {
     font-size: xxx-large;
     text-align: center;
     color: black;
-    background-color: #E1CCBE;
+    background-color: #EEEDEB;
     height: 200px;
     display: flex;
     justify-content: center;
@@ -172,5 +172,14 @@ img {
     font-size: 36px;
 }
 
+.card-body p {
+    font-family: cormorantgaramond;
+    font-size: 24px;
+}
+
+#contactus p {
+    font-family: cormorantgaramond;
+    font-size: 22px;
+}
 /* #masonry-gallery {
 } */
