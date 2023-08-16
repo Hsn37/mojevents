@@ -28,10 +28,16 @@
 
     <div class="container-fluid">
         <div class="row justify-content-center" id="masonry-gallery">
-        {{#each images}}
-            <div class="col-lg-4 mb-4 d-flex justify-content-center grid-item">
-                <div class="card">
-                    <img src="{{this}}" width="100%">
+        {{#each media}}
+            <div class="col-lg-4 mb-4 grid-item">
+                <div class="rounded-2 shadow-sm p-0">
+                {{#if this.isImage}}
+                    <img src="{{this.src}}" width="100%">
+                {{else}}
+                    <video class="galleryvideo" autoplay loop muted style="width: 100%">
+                        <source src="{{this.src}}" type="video/mp4" />
+                    </video>
+                {{/if}}
                 </div>
             </div>
         {{/each}}
@@ -48,7 +54,6 @@
     $('#navbar').load('/components/navbar')
     $('#footer').load('/components/footer')
     
-
     {{!-- masonry code to align the images in the gallery --}}
     var grid = $('#masonry-gallery').masonry({
         itemSelector: '.grid-item',
@@ -56,5 +61,10 @@
     })
 
     grid.imagesLoaded().progress(() => grid.masonry('layout'))
+
+
+    $('.galleryvideo').on('loadeddata', () => {
+        grid.masonry('layout')
+    })
 
 </script>

@@ -12,14 +12,18 @@ let root = './assets/images/events/'
 fs.readdirSync(root).forEach((x, index) => {
     __path = path.join(root, x)
 
-    let event_data = {id: 'event' + index, title: x, images: [], thumbnail: ''}
+    let event_data = {id: 'event' + index, title: x, media: [], thumbnail: ''}
     fs.readdirSync(__path).forEach((y) => {
 
         if (y.startsWith('thumbnail')) {
             event_data.thumbnail = path.join('/', __path, y).replaceAll('\\', '/')
         }
         else {
-            event_data.images.push(path.join('/', __path, y).replaceAll('\\', '/'))
+            let obj = {}
+            obj['src'] = path.join('/', __path, y).replaceAll('\\', '/')
+            obj['isImage'] = y.endsWith('.mov') || y.endsWith('.mp4')? false : true
+            
+            event_data.media.push(obj)
         }
     });
 
@@ -46,7 +50,7 @@ catch (e) {
 for (let [index, event] of data.entries()) {    
     let ev_rendered = Handlebars.compile(events_template)({
         title: event.title,
-        images: event.images
+        media: event.media
     });
 
     fs.writeFileSync(`events/${event.id}.html`, ev_rendered)
