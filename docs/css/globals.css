@@ -177,9 +177,9 @@ img {
     font-size: 24px;
 }
 
-#contactus p {
-    font-family: cormorantgaramond;
-    font-size: 22px;
+#contactus p{
+    font-family: 'serif';
+    font-size: 18px;
 }
 /* #masonry-gallery {
 } */
