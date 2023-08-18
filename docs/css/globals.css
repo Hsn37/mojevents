@@ -128,16 +128,24 @@ img {
     padding-top: 40px;
 }
 
+@keyframes pulse {
+    0% {opacity: 1.0;}
+    30% {opacity: 0.7;}
+    60%, 100% {opacity: 1.0;}
+}
+
 .gallery-tile {
     max-width: 400px;
     max-height: 400px;
-    min-width: 250px;
-    min-height: 250px;
+    min-width: 300px;
+    min-height: 300px;
     aspect-ratio: 1;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    animation: pulse 1.5s;
+    animation-iteration-count: infinite;
     /* margin: 30px; */
 }
 
@@ -179,7 +187,4 @@ img {
 
 #contactus p{
     font-family: 'serif';
-    font-size: 18px;
 }
-/* #masonry-gallery {
-} */
