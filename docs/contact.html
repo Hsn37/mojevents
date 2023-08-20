@@ -28,9 +28,9 @@
         </div>
         <div class="col-12 col-lg-6 d-flex flex-column align-items-center justify-content-center">
             <p class="fs-4">Phone: +1 (847) 749-5834</p>
-            <p class="fs-4">Email:"{email address}"</p>
+            <p class="fs-4">Email: inquiry@mojeventsndesigns.com</p>
             <p class="fs-4">4645 Linden Ave, Glenview, 60025</p>
-            <div class="button2">Schedule A Meeting</div>
+            <div class="button2" id="meeting">Schedule A Meeting</div>
         </div>
     </div>
 
@@ -43,4 +43,11 @@
 <script>
     $('#navbar').load('/components/navbar')
     $('#footer').load('/components/footer')
+
+    $('#meeting').on(
+        'click', 
+        () => {
+            window.location.href = 'https://calendly.com/mojevents/30min'
+        }
+    )
 </script>
