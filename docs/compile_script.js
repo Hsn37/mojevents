@@ -5,12 +5,16 @@ const path = require('path');
 // log wrapper
 var print = console.log
 
-let data = []
+let data = {}
 
 let root = './assets/images/events/'
+let order = './assets/images/events/EventsOrder.txt'
 
 fs.readdirSync(root).forEach((x, index) => {
-    __path = path.join(root, x)
+    let __path = path.join(root, x)
+
+    if (!fs.lstatSync(__path).isDirectory())
+        return
 
     let event_data = {id: 'event' + index, title: x, media: [], thumbnail: ''}
     fs.readdirSync(__path).forEach((y) => {
@@ -27,7 +31,7 @@ fs.readdirSync(root).forEach((x, index) => {
         }
     });
 
-    data.push(event_data)
+    data[event_data.title] = event_data
 });
 
 events_template = fs.readFileSync('templates/event.handlebars').toString()
@@ -46,8 +50,12 @@ catch (e) {
 }
 
 
+// sort the events
+eventorder = fs.readFileSync(order).toString().split('\n').map(x => x.trim())
+let finaldata = eventorder.reduce((prev, ev) => [...prev, data[ev]], [])
+
 // event pages
-for (let [index, event] of data.entries()) {    
+for (let [index, event] of finaldata.entries()) {    
     let ev_rendered = Handlebars.compile(events_template)({
         title: event.title,
         media: event.media
@@ -57,4 +65,4 @@ for (let [index, event] of data.entries()) {
 }
 
 // gallery page
-fs.writeFileSync('gallery.html', Handlebars.compile(gallery_template)({events: data}))
+fs.writeFileSync('gallery.html', Handlebars.compile(gallery_template)({events: finaldata}))
