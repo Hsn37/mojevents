@@ -18,6 +18,11 @@ img {
     object-fit: cover;
 }
 
+.nav-link {
+    color: black !important; 
+    font-size: 22px;
+}
+
 #panel1 {
     background-color: white;
     padding: 2%;
@@ -96,7 +101,7 @@ img {
 
 .title {
     font-family: lapaloma;
-    font-size: 40px;
+    font-size: 30px;
     line-height: 70px;
     color: black;
 }

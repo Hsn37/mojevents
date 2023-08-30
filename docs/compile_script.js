@@ -10,6 +10,15 @@ let data = {}
 let root = './assets/images/events/'
 let order = './assets/images/events/EventsOrder.txt'
 
+function toNum(str) {
+    try {
+        return parseInt(str.match(/(\d+)/)[0])
+    }    
+    catch {
+        return 0
+    }
+}
+
 fs.readdirSync(root).forEach((x, index) => {
     let __path = path.join(root, x)
 
@@ -17,7 +26,7 @@ fs.readdirSync(root).forEach((x, index) => {
         return
 
     let event_data = {id: 'event' + index, title: x, media: [], thumbnail: ''}
-    fs.readdirSync(__path).forEach((y) => {
+    fs.readdirSync(__path).sort((a, b) => toNum(a) - toNum(b)).forEach((y) => {
 
         if (y.startsWith('thumbnail')) {
             event_data.thumbnail = path.join('/', __path, y).replaceAll('\\', '/')
