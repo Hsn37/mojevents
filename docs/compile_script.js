@@ -7,8 +7,8 @@ var print = console.log
 
 let data = {}
 
-let root = './assets/images/events/'
-let order = './assets/images/events/EventsOrder.txt'
+let root = './assets/media/events/'
+let order = './assets/media/events/EventsOrder.txt'
 
 function toNum(str) {
     try {
