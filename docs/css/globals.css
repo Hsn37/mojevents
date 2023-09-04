@@ -101,14 +101,14 @@ img {
 
 .title {
     font-family: lapaloma;
-    font-size: 30px;
+    font-size: 32px;
     line-height: 70px;
     color: black;
 }
 
 .info {
     font-family: cormorantgaramond;
-    font-size: 20px;
+    /* font-size: 20px; */
     color: black;
     line-height: 35px;
 }

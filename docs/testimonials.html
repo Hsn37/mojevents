@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="/css/globals.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    
+    <title>Moj Events</title>
+</head>
+
+<body>
+    <div class="container-fluid" id="panel1">
+        <span id="navbar"></span>
+    </div>
+
+    <!-- testimonials -->
+    <div id="page-title">Testimonials</div>
+    <div class="d-flex justify-content-evenly flex-col align-items-center flex-wrap p-0 mb-5">
+        <!-- card for each testimonial  -->
+        <div class="w-75 p-5 rounded-2 shadow mt-4 bg-light">
+            <div class="d-flex flex-column flex-lg-row align-items-center justify-content-around">
+                <div class="d-flex flex-row align-items-center justify-content-center">
+                    <img src="/assets/media/woman1.png" width="250" class="m-5">
+                </div>
+                <div class="d-flex flex-row align-items-center justify-content-center">
+                    <div class="fs-4">
+                        <img src="/assets/media/quotesopen.png" width="20" style="position: relative; top: -10px" />
+                        I am very pleased with Moj Events and Designs! They were very fast and efficient in addressing my request. They also decorated just how we wanted, according to our color themes and centrepieces. The day of the event everyone LOVED the stage. They also enhanced some of our centrepieces with complementary decor😊 Would definitely work with them again. Thank You :)
+                        <img src="/assets/media/quotesclose.png" width="20" style="position: relative; top: -10px" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-75 p-5 rounded-2 shadow mt-4 bg-light">
+            <div class="d-flex flex-column flex-lg-row align-items-center justify-content-around">
+                <div class="d-flex flex-row align-items-center justify-content-center order-lg-2">
+                    <img src="/assets/media/woman2.png" width="250" class="m-5">
+                </div>
+                <div class="d-flex flex-row align-items-center justify-content-center order-lg-1">
+                    <div class="fs-4">
+                        <img src="/assets/media/quotesopen.png" width="20" style="position: relative; top: -10px" />
+                        Absolutely stunning! We could not have done today without you. Thank you for all your beautiful work on this stage decor.
+                        <img src="/assets/media/quotesclose.png" width="20" style="position: relative; top: -10px" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="container-fluid" id="panel3">
+        <span id="footer"></span>
+    </div>
+</body>
+</html>
+<script>
+    $('#navbar').load('/components/navbar')
+    $('#footer').load('/components/footer')
+</script>
+<script>
+    $('.tile-title').hover(
+        // on hover
+        (e) => {
+            // console.log($(this).find('tile-title'))
+            $(e.target).css('opacity', 0.7)
+        },
+        // exit hover
+        (e) => {
+            $(e.target).css('opacity', 0)
+        }
+    )
+
+    $('.tile-title').click(
+        // on click
+        (e) => {
+            // console.log($(this).find('tile-title'))
+            let id = e.target.id
+            window.location.href = `/events/${id}`
+        }
+    )
+
+</script>
