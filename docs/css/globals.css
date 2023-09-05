@@ -126,11 +126,11 @@ img {
     text-align: center;
     color: black;
     background-color: #EEEDEB;
-    height: 200px;
+    /* height: 200px; */
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 40px;
+    padding-top: 100px;
 }
 
 @keyframes pulse {
