@@ -19,27 +19,29 @@
     </div>
 
     <!-- testimonials -->
-    <div id="page-title">Testimonials</div>
-    <div class="d-flex justify-content-evenly flex-col align-items-center flex-wrap p-0 mb-5">
+    <div id="page-title" style="font-size: 42px;">Testimonials</div>
+    <div class="d-flex justify-content-evenly flex-col align-items-center flex-wrap px-3 px-lg-5 mb-5">
         <!-- card for each testimonial  -->
-        <div class="w-75 p-5 rounded-2 shadow mt-4 bg-light">
+        <div class="p-4 rounded-2 shadow mt-4 bg-light testimonial-card">
             <div class="d-flex flex-column flex-lg-row align-items-center justify-content-around">
                 <div class="d-flex flex-row align-items-center justify-content-center">
-                    <img src="/assets/media/woman1.png" width="250" class="m-5">
+                    <img src="/assets/media/woman1.png" width="250" class="my-4 m-lg-5">
                 </div>
                 <div class="d-flex flex-row align-items-center justify-content-center">
                     <div class="fs-4">
                         <img src="/assets/media/quotesopen.png" width="20" style="position: relative; top: -10px" />
-                        I am very pleased with Moj Events and Designs! They were very fast and efficient in addressing my request. They also decorated just how we wanted, according to our color themes and centrepieces. The day of the event everyone LOVED the stage. They also enhanced some of our centrepieces with complementary decor😊 Would definitely work with them again. Thank You :)
+                        I am very pleased with Moj Events and Designs! They were very fast and efficient in addressing my request. They also decorated just how we wanted, according to our color themes and centrepieces. The day of the event everyone LOVED the stage. They also enhanced some of our centrepieces with complementary decor😊 Would definitely work with them again. 
+                        <br>
+                        Thank You :)
                         <img src="/assets/media/quotesclose.png" width="20" style="position: relative; top: -10px" />
                     </div>
                 </div>
             </div>
         </div>
-        <div class="w-75 p-5 rounded-2 shadow mt-4 bg-light">
+        <div class="p-4 rounded-2 shadow mt-4 bg-light testimonial-card">
             <div class="d-flex flex-column flex-lg-row align-items-center justify-content-around">
                 <div class="d-flex flex-row align-items-center justify-content-center order-lg-2">
-                    <img src="/assets/media/woman2.png" width="250" class="m-5">
+                    <img src="/assets/media/woman2.png" width="250" class="my-4 m-lg-5">
                 </div>
                 <div class="d-flex flex-row align-items-center justify-content-center order-lg-1">
                     <div class="fs-4">
@@ -61,27 +63,4 @@
 <script>
     $('#navbar').load('/components/navbar')
     $('#footer').load('/components/footer')
-</script>
-<script>
-    $('.tile-title').hover(
-        // on hover
-        (e) => {
-            // console.log($(this).find('tile-title'))
-            $(e.target).css('opacity', 0.7)
-        },
-        // exit hover
-        (e) => {
-            $(e.target).css('opacity', 0)
-        }
-    )
-
-    $('.tile-title').click(
-        // on click
-        (e) => {
-            // console.log($(this).find('tile-title'))
-            let id = e.target.id
-            window.location.href = `/events/${id}`
-        }
-    )
-
 </script>

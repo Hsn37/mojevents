@@ -193,3 +193,10 @@ img {
 #contactus p{
     font-family: 'serif';
 }
+
+/* testimonials */
+@media (min-width: 992px) {
+    .testimonial-card {
+        width: 75%
+    }
+}
